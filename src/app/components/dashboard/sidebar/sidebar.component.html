@@ -1,0 +1,9 @@
+<mat-toolbar color="whitesmoke">
+    <span>iNexus Dashboard</span>
+    <span class="example-spacer"></span>
+    <button mat-button *ngFor="let item of menu" [routerLink] ="item.redirect">{{ item.name }}</button>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/dashboard/logout">
+        <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>

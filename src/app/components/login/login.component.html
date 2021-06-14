@@ -1,0 +1,19 @@
+<div class="body">
+    <div class="login">
+        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="login()">
+            <img src="./assets/img/user.png" width= "50%;">
+            <h1>Login INEXUS Test</h1>
+            <mat-form-field class="field-width">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput autocomplete="off" formControlName="usuario">
+            </mat-form-field>
+            <mat-form-field class="field-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput autocomplete="off" formControlName="password">
+            </mat-form-field>
+            <br>
+            <button type="submit" class="field-width button-height" mat-raised-button color="primary" [disabled]="form.invalid">Login</button>
+        </form>
+    </div>
+</div>
